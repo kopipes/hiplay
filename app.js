@@ -27,6 +27,7 @@ const IP_DATABASE = [
     merchImage: 'img/slide-07.jpg',
     mascotImage: 'img/slide-09.jpg',
     slides: [6, 7, 8, 9, 34],
+    logoImage: 'images/logo/logo-legenda-panji.png',
     charImage: 'images/character/legenda-panji.png',
     merchHighlights: ['Krucil character tumblers & water bottles', 'Apparel & graphic tees', 'Plush keychains & mascot cushions', 'Tote bags & collector pouches']
   },
