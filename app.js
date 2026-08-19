@@ -212,6 +212,7 @@ const IP_DATABASE = [
     mascotImage: 'img/slide-04.jpg',
     slides: [10, 11, 4, 34],
     logoImage: 'images/logo/logo-dino-island.png',
+    charImage: 'images/character/dino.png',
     merchHighlights: ['Jungle explorer roll-top backpacks', 'Dino Island Team jerseys & graphic shirts', 'Custom sculpted prehistoric dinosaur mugs', 'Explorer badge caps, lanyards & pins']
   }
 ];
