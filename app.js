@@ -27,6 +27,7 @@ const IP_DATABASE = [
     merchImage: 'img/slide-07.jpg',
     mascotImage: 'img/slide-09.jpg',
     slides: [6, 7, 8, 9, 34],
+    charImage: 'images/character/legenda-panji.png',
     merchHighlights: ['Krucil character tumblers & water bottles', 'Apparel & graphic tees', 'Plush keychains & mascot cushions', 'Tote bags & collector pouches']
   },
   {
@@ -105,6 +106,7 @@ const IP_DATABASE = [
     merchImage: 'img/slide-22.jpg',
     mascotImage: 'img/slide-04.jpg',
     slides: [20, 21, 22, 4],
+    charImage: 'images/character/hidudu.png',
     merchHighlights: ['Dudu & Bimo crossbody sling bags', 'Pastel graphic tees & daily apparel', 'Collector tumbler series with character expressions', 'Cute keychains, pastel caps & cosmetic pouches']
   },
   {
