@@ -107,10 +107,6 @@
 
         <!-- Left: text content -->
         <div class="lg:col-span-6 xl:col-span-7">
-          <!-- hIPlay logo mark -->
-          <div class="mb-5">
-            <img src="images/logo/logo-hiplay.png" alt="hIPlay" class="h-12 sm:h-14 w-auto object-contain drop-shadow-md" fetchpriority="high" />
-          </div>
           <!-- Top Pill -->
           <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full gradient-hero-badge shadow-sm mb-5 animate-float">
             <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
@@ -144,20 +140,32 @@
           </div>
         </div>
 
-        <!-- Right: character collage -->
-        <div class="lg:col-span-6 xl:col-span-5 relative hidden lg:flex items-center justify-center">
-          <div class="grid grid-cols-2 gap-4 w-full max-w-md">
-            <div onclick="hIPlayApp.openIPModal('panji')" class="cursor-pointer bg-amber-50 border-2 border-amber-200/60 rounded-3xl p-4 flex items-center justify-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-float" style="transform: rotate(-2deg);">
-              <img src="images/character/legenda-panji.png" alt="Legenda Panji" class="h-32 w-auto object-contain drop-shadow-lg" fetchpriority="high" />
+        <!-- Right: all 8 character collage (4x2 grid) -->
+        <div class="lg:col-span-6 xl:col-span-5 hidden lg:block">
+          <div class="grid grid-cols-4 gap-3">
+            <div onclick="hIPlayApp.openIPModal('panji')" class="cursor-pointer bg-white border-2 border-amber-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
+              <img src="images/character/legenda-panji.png" alt="Legenda Panji" class="h-full w-full object-contain drop-shadow-md" />
             </div>
-            <div onclick="hIPlayApp.openIPModal('milk-mocha')" class="cursor-pointer bg-rose-50 border-2 border-rose-200/60 rounded-3xl p-4 flex items-center justify-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-float-delayed" style="transform: rotate(2deg);">
-              <img src="images/character/milk-mocha.png" alt="Milk Mocha" class="h-32 w-auto object-contain drop-shadow-lg" fetchpriority="high" />
+            <div onclick="hIPlayApp.openIPModal('milk-mocha')" class="cursor-pointer bg-rose-50 border-2 border-rose-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
+              <img src="images/character/milk-mocha.png" alt="Milk Mocha" class="h-full w-full object-contain drop-shadow-md" />
             </div>
-            <div onclick="hIPlayApp.openIPModal('kidbash')" class="cursor-pointer bg-blue-50 border-2 border-blue-200/60 rounded-3xl p-4 flex items-center justify-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-float-delayed" style="transform: rotate(1.5deg);">
-              <img src="images/character/kidbash.png" alt="Kidbash" class="h-32 w-auto object-contain drop-shadow-lg" fetchpriority="high" />
+            <div onclick="hIPlayApp.openIPModal('si-juki')" class="cursor-pointer bg-yellow-50 border-2 border-yellow-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
+              <img src="images/character/si-juki.png" alt="Si Juki" class="h-full w-full object-contain drop-shadow-md" />
             </div>
-            <div onclick="hIPlayApp.openIPModal('si-juki')" class="cursor-pointer bg-yellow-50 border-2 border-yellow-200/60 rounded-3xl p-4 flex items-center justify-center hover:scale-105 hover:shadow-xl transition-all duration-300 animate-float" style="transform: rotate(-1.5deg);">
-              <img src="images/character/si-juki.png" alt="Si Juki" class="h-32 w-auto object-contain drop-shadow-lg" fetchpriority="high" />
+            <div onclick="hIPlayApp.openIPModal('hai-dudu')" class="cursor-pointer bg-purple-50 border-2 border-purple-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
+              <img src="images/character/hidudu.png" alt="Hai Dudu" class="h-full w-full object-contain drop-shadow-md" />
+            </div>
+            <div onclick="hIPlayApp.openIPModal('fun-cican')" class="cursor-pointer bg-sky-50 border-2 border-sky-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
+              <img src="images/character/fun-cican.png" alt="Fun Cican" class="h-full w-full object-contain drop-shadow-md" />
+            </div>
+            <div onclick="hIPlayApp.openIPModal('kidbash')" class="cursor-pointer bg-blue-50 border-2 border-blue-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
+              <img src="images/character/kidbash.png" alt="Kidbash" class="h-full w-full object-contain drop-shadow-md" />
+            </div>
+            <div onclick="hIPlayApp.openIPModal('dino-island')" class="cursor-pointer bg-emerald-50 border-2 border-emerald-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
+              <img src="images/character/dino.png" alt="Dino Island" class="h-full w-full object-contain drop-shadow-md" />
+            </div>
+            <div onclick="hIPlayApp.openIPModal('bona')" class="cursor-pointer bg-pink-50 border-2 border-pink-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
+              <img src="images/character/bona.png" alt="Bona & Friends" class="h-full w-full object-contain drop-shadow-md" />
             </div>
           </div>
         </div>
