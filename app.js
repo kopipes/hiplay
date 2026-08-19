@@ -372,8 +372,8 @@ window.hIPlayApp = {
     content.innerHTML = `
       <div class="p-6 md:p-10">
         <div class="flex flex-wrap items-start justify-between gap-4 pb-6 border-b border-slate-100">
-          <div>
-            <div class="flex items-center gap-2 mb-2">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-3">
               <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700">
                 ${ip.badge}
               </span>
@@ -381,9 +381,11 @@ window.hIPlayApp = {
                 ${ip.categoryTag}
               </span>
             </div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-display">${ip.name}</h2>
-            ${ip.logoImage ? `<img src="${ip.logoImage}" alt="${ip.name} logo" class="h-8 w-auto object-contain mt-2 opacity-80" />` : ''}
-            <p class="text-base text-slate-600 font-medium mt-1">${ip.tagline}</p>
+            <div class="flex items-center gap-5">
+              ${ip.logoImage ? `<img src="${ip.logoImage}" alt="${ip.name} logo" class="h-14 md:h-16 w-auto object-contain shrink-0" />` : ''}
+              <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-display">${ip.name}</h2>
+            </div>
+            <p class="text-base text-slate-600 font-medium mt-2">${ip.tagline}</p>
           </div>
           <button onclick="hIPlayApp.closeIPModal()" class="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors">
             <i data-lucide="x" class="w-5 h-5"></i>

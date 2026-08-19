@@ -294,10 +294,10 @@ body {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Hero: two-column — content left, logo right -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-14">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-14">
 
-        <!-- Left: text content -->
-        <div>
+        <!-- Left: text content (pushed down a bit) -->
+        <div class="lg:pt-12">
           <!-- Top Pill -->
           <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full gradient-hero-badge shadow-sm mb-6 animate-float">
             <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
@@ -331,8 +331,8 @@ body {
           </div>
         </div>
 
-        <!-- Right: hIPlay logo -->
-        <div class="flex items-center justify-center lg:justify-end">
+        <!-- Right: hIPlay logo — aligned to top -->
+        <div class="flex items-start justify-center lg:justify-end">
           <img src="images/logo/logo-hiplay.png" alt="hIPlay" class="w-full max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain drop-shadow-2xl animate-float" />
         </div>
 
@@ -439,18 +439,20 @@ body {
   <section id="about" class="py-20 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-amber-100 text-amber-800">
+      <div class="mb-10">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider bg-amber-100 text-amber-800 mb-4">
             <i data-lucide="award" class="w-4 h-4 text-amber-600"></i>
             <span>Government Endorsed Initiative</span>
           </div>
-
           <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 font-display tracking-tight leading-tight">
-            Inviting You to Join Our Mission to Boost <br />
-            <span class="gradient-hiplay-text">Indonesia's Creative Economy!</span>
+            Inviting You to Join Our Mission to Boost
+            <span class="gradient-hiplay-text"> Indonesia's Creative Economy!</span>
           </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-6 space-y-6">
 
           <p class="text-base text-slate-600 leading-relaxed">
             <strong>hIPlay is set to be the trailblazing initiative that catapults the Creative Economy into action</strong>, all with your valuable support as the first ever city host and the official endorsement from the <strong>Ministry of Creative Economy of Indonesia</strong>.
@@ -789,7 +791,7 @@ body {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
-            <img src="images/character/legenda-panji.png" alt="Legenda Panji" class="h-12 w-auto object-contain mb-2" />
+            <img src="images/logo/logo-legenda-panji.png" alt="Legenda Panji" class="h-12 w-auto object-contain mb-2" />
             <h5 class="text-xs font-bold text-white">Legenda Panji</h5>
             <p class="text-[10px] text-slate-400 mt-1">UNESCO Recognized Family Fantasy universe.</p>
           </div>
@@ -1111,7 +1113,7 @@ body {
   </footer>
 
   <!-- Modal: IP Deep-Dive -->
-  <div id="ipDetailModal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4 md:p-6 overflow-y-auto">
+  <div id="ipDetailModal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4 md:p-6 overflow-y-auto" onclick="if(event.target===this)hIPlayApp.closeIPModal()">
     <div class="relative w-full max-w-5xl bg-white rounded-3xl shadow-2xl max-h-[92vh] overflow-y-auto border border-slate-100 animate-in fade-in zoom-in duration-200">
       <div id="ipDetailContent">
         <!-- JavaScript populates deep dive content -->
