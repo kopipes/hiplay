@@ -3,7 +3,7 @@
 
 /* Offset anchor scroll so section titles clear the sticky nav + announcement bar */
 section[id] {
-  scroll-margin-top: 115px;
+  scroll-margin-top: 90px;
 }
 
 :root {
