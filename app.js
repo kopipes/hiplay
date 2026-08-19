@@ -51,6 +51,8 @@ const IP_DATABASE = [
     styleGuideImage: 'img/slide-15.jpg',
     merchImage: 'img/slide-16.jpg',
     slides: [14, 15, 16],
+    logoImage: 'images/logo/logo-milk-mocha.png',
+    charImage: 'images/character/milk-mocha.png',
     merchHighlights: ['Eco-friendly tote bags & commuter canvas bags', 'Double-wall stainless tumblers & pastel flasks', 'Embroidered dad caps & soft pastel tees', 'Couple plushies, keychains & pouch sets']
   },
   {
@@ -76,6 +78,8 @@ const IP_DATABASE = [
     merchImage: 'img/slide-19.jpg',
     mascotImage: 'img/slide-04.jpg',
     slides: [17, 18, 19, 4],
+    logoImage: 'images/logo/logo-si-juki.png',
+    charImage: 'images/character/si-juki.png',
     merchHighlights: ['Hustle & \'Kerja Keras / Scroll Lebih Keras\' graphic apparel', 'Canvas messenger & \'Out of the Box\' tote bags', 'FOMO & \'Ngutang Dulu\' acrylic keychains', '\'Overthinking\' streetwear dad caps & tumblers']
   },
   {
@@ -126,6 +130,8 @@ const IP_DATABASE = [
     merchImage: 'img/slide-25.jpg',
     mascotImage: 'img/slide-04.jpg',
     slides: [23, 24, 25, 4],
+    logoImage: 'images/logo/logo-fun-cican.png',
+    charImage: 'images/character/fun-cican.png',
     merchHighlights: ['Children drawstring backpacks & school tote bags', 'Playful yellow-and-blue graphic t-shirts', 'Stainless leak-proof school tumblers', 'Character badges, caps & pencil cases']
   },
   {
@@ -150,6 +156,8 @@ const IP_DATABASE = [
     styleGuideImage: 'img/slide-27.jpg',
     merchImage: 'img/slide-28.jpg',
     slides: [26, 27, 28],
+    logoImage: 'images/logo/logo-kidbash.png',
+    charImage: 'images/character/kidbash.png',
     merchHighlights: ['Insert Coin & Those Who Are Forgotten gamer tees', 'Cyber-styled heavy-duty tote bags & pouches', 'Kidbash Energy sport bottles & vacuum tumblers', 'Pixel acrylic charm keychains & gamer caps']
   },
   {
@@ -174,6 +182,8 @@ const IP_DATABASE = [
     styleGuideImage: 'img/slide-30.jpg',
     merchImage: 'img/slide-31.jpg',
     slides: [29, 30, 31],
+    logoImage: 'images/logo/logo-bona.png',
+    charImage: 'images/character/bona.png',
     merchHighlights: ['Pastel illustration tote bags & tie-dye tees', 'Character patterned tumblers & water flasks', 'Embroidered purple baseball caps & pouches', 'Collectible acrylic keyrings of Bona, Ola & Kaka']
   },
   {
@@ -198,6 +208,7 @@ const IP_DATABASE = [
     merchImage: 'img/slide-11.jpg',
     mascotImage: 'img/slide-04.jpg',
     slides: [10, 11, 4, 34],
+    logoImage: 'images/logo/logo-dino-island.png',
     merchHighlights: ['Jungle explorer roll-top backpacks', 'Dino Island Team jerseys & graphic shirts', 'Custom sculpted prehistoric dinosaur mugs', 'Explorer badge caps, lanyards & pins']
   }
 ];
@@ -300,8 +311,8 @@ window.hIPlayApp = {
             </span>
           </div>
 
-          <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-100 mb-5 border border-slate-100 cursor-pointer" onclick="hIPlayApp.openIPModal('${ip.id}')">
-            <img src="${ip.coverImage}" alt="${ip.name}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+          <div class="relative w-full h-56 rounded-2xl overflow-hidden ${ip.charImage ? 'bg-white' : 'bg-slate-100'} mb-5 border border-slate-100 cursor-pointer" onclick="hIPlayApp.openIPModal('${ip.id}')">
+            <img src="${ip.charImage || ip.coverImage}" alt="${ip.name}" class="w-full h-full ${ip.charImage ? 'object-contain p-3' : 'object-cover object-center'} group-hover:scale-105 transition-transform duration-500 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
               <span class="text-white text-xs font-bold flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded-full backdrop-blur-md">
                 <i data-lucide="expand" class="w-3.5 h-3.5"></i> Explore IP Deep-Dive
@@ -310,7 +321,7 @@ window.hIPlayApp = {
           </div>
 
           <h3 class="text-2xl font-bold text-slate-900 mb-1.5 font-display flex items-center justify-between">
-            <span>${ip.name}</span>
+            ${ip.logoImage ? `<img src="${ip.logoImage}" alt="${ip.name}" class="h-8 w-auto object-contain" />` : `<span>${ip.name}</span>`}
           </h3>
           <p class="text-xs font-bold uppercase tracking-wider text-rose-500 mb-2">${ip.categoryTag}</p>
           <p class="text-sm font-semibold text-slate-700 mb-3">${ip.tagline}</p>
@@ -367,6 +378,7 @@ window.hIPlayApp = {
               </span>
             </div>
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-display">${ip.name}</h2>
+            ${ip.logoImage ? `<img src="${ip.logoImage}" alt="${ip.name} logo" class="h-8 w-auto object-contain mt-2 opacity-80" />` : ''}
             <p class="text-base text-slate-600 font-medium mt-1">${ip.tagline}</p>
           </div>
           <button onclick="hIPlayApp.closeIPModal()" class="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors">
