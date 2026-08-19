@@ -1,6 +1,11 @@
 /* hIPlay Custom Modern Light Theme Styles */
 /* Fonts loaded via <link> in HTML head - no @import needed */
 
+/* Offset anchor scroll so section titles clear the sticky nav + announcement bar */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
 :root {
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Fredoka', cursive, 'Plus Jakarta Sans', sans-serif;
