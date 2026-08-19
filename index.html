@@ -5,6 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hIPlay | Indonesia's Premier IP Playground & Experience Platform</title>
   <meta name="description" content="hIPlay is Indonesia's leading IP Experience Platform by Provaliant Studios. Bringing iconic characters into real-life events, merchandise, and global franchises." />
+  <meta name="keywords" content="hIPlay, IP Experience Platform, Indonesia, Provaliant Studios, character licensing, IP licensing, live events, merchandise, Legenda Panji, Milk Mocha Bear, Si Juki, Hai Dudu, Fun Cican, Kidbash, Dino Island, Bona Friends, creative economy Indonesia, city host, pop culture Indonesia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Provaliant Studios" />
+  <link rel="canonical" href="https://hiplay.id/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hiplay.id/" />
+  <meta property="og:title" content="hIPlay | Indonesia's Premier IP Playground & Experience Platform" />
+  <meta property="og:description" content="hIPlay is Indonesia's leading IP Experience Platform by Provaliant Studios. Bringing iconic characters into real-life events, merchandise, and global franchises." />
+  <meta property="og:image" content="https://hiplay.id/images/logo/logo-hiplay.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="hIPlay" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="hIPlay | Indonesia's Premier IP Playground & Experience Platform" />
+  <meta name="twitter:description" content="Indonesia's leading IP Experience Platform. 8 iconic characters, live events, merchandise & global franchises by Provaliant Studios." />
+  <meta name="twitter:image" content="https://hiplay.id/images/logo/logo-hiplay.png" />
+
+  <!-- GEO Meta Tags -->
+  <meta name="geo.region" content="ID" />
+  <meta name="geo.placename" content="Jakarta, Indonesia" />
+  <meta name="geo.position" content="-6.2088;106.8456" />
+  <meta name="ICBM" content="-6.2088, 106.8456" />
+  <meta name="language" content="id, en" />
+
+  <!-- JSON-LD: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://hiplay.id/#organization",
+        "name": "hIPlay by Provaliant Studios",
+        "alternateName": "hIPlay",
+        "url": "https://hiplay.id/",
+        "logo": "https://hiplay.id/images/logo/logo-hiplay.png",
+        "description": "Indonesia's leading IP Experience Platform transforming beloved characters into live events, merchandise, and global franchises.",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Jakarta, Indonesia"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Ruko Business Park Kebon Jeruk, Blok E1 No. 11-12, Jl. Meruya Ilir No. 88",
+          "addressLocality": "Jakarta",
+          "postalCode": "11620",
+          "addressCountry": "ID"
+        },
+        "telephone": "+622130061595",
+        "email": "nungky@provaliantgroup.com",
+        "sameAs": [
+          "https://www.provaliantgroup.com"
+        ],
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Provaliant Group",
+          "url": "https://www.provaliantgroup.com"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hiplay.id/#website",
+        "url": "https://hiplay.id/",
+        "name": "hIPlay",
+        "description": "Indonesia's Premier IP Playground & Experience Platform",
+        "publisher": { "@id": "https://hiplay.id/#organization" },
+        "inLanguage": ["id", "en"]
+      },
+      {
+        "@type": "EntertainmentBusiness",
+        "@id": "https://hiplay.id/#business",
+        "name": "hIPlay",
+        "url": "https://hiplay.id/",
+        "image": "https://hiplay.id/images/logo/logo-hiplay.png",
+        "description": "IP Experience Platform featuring 8 iconic Indonesian character franchises for live events, merchandise, and licensing.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Indonesia"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IP Licensing & Experience Services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IP Licensing" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "City Host Events" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Character Merchandise" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Activations" } }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,7 +167,7 @@
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <img src="images/logo/logo-hiplay.png" alt="hIPlay - Indonesia's IP Playground" class="h-10 sm:h-12 w-auto object-contain" />
+        <img loading="lazy" src="images/logo/logo-hiplay.png" alt="hIPlay - Indonesia's IP Playground" class="h-10 sm:h-12 w-auto object-contain" />
         <div class="hidden sm:flex flex-col">
           <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Indonesia's IP Playground</span>
           <span class="text-xs font-extrabold text-slate-800 flex items-center gap-1">
@@ -144,28 +243,28 @@
         <div class="lg:col-span-6 xl:col-span-5 hidden lg:block">
           <div class="grid grid-cols-4 gap-3">
             <div onclick="hIPlayApp.openIPModal('panji')" class="cursor-pointer bg-white border-2 border-amber-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
-              <img src="images/character/legenda-panji.png" alt="Legenda Panji" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/legenda-panji.png" alt="Legenda Panji" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('milk-mocha')" class="cursor-pointer bg-rose-50 border-2 border-rose-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
-              <img src="images/character/milk-mocha.png" alt="Milk Mocha" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/milk-mocha.png" alt="Milk Mocha" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('si-juki')" class="cursor-pointer bg-yellow-50 border-2 border-yellow-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
-              <img src="images/character/si-juki.png" alt="Si Juki" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/si-juki.png" alt="Si Juki" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('hai-dudu')" class="cursor-pointer bg-purple-50 border-2 border-purple-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
-              <img src="images/character/hidudu.png" alt="Hai Dudu" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/hidudu.png" alt="Hai Dudu" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('fun-cican')" class="cursor-pointer bg-sky-50 border-2 border-sky-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
-              <img src="images/character/fun-cican.png" alt="Fun Cican" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/fun-cican.png" alt="Fun Cican" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('kidbash')" class="cursor-pointer bg-blue-50 border-2 border-blue-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
-              <img src="images/character/kidbash.png" alt="Kidbash" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/kidbash.png" alt="Kidbash" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('dino-island')" class="cursor-pointer bg-emerald-50 border-2 border-emerald-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float-delayed aspect-square">
-              <img src="images/character/dino.png" alt="Dino Island" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/dino.png" alt="Dino Island" class="h-full w-full object-contain drop-shadow-md" />
             </div>
             <div onclick="hIPlayApp.openIPModal('bona')" class="cursor-pointer bg-pink-50 border-2 border-pink-200/60 rounded-2xl p-2 flex items-center justify-center hover:scale-105 hover:shadow-lg transition-all duration-300 animate-float aspect-square">
-              <img src="images/character/bona.png" alt="Bona & Friends" class="h-full w-full object-contain drop-shadow-md" />
+              <img loading="lazy" src="images/character/bona.png" alt="Bona & Friends" class="h-full w-full object-contain drop-shadow-md" />
             </div>
           </div>
         </div>
@@ -927,7 +1026,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
       
       <div class="flex items-center gap-3">
-        <img src="images/logo/logo-hiplay.png" alt="hIPlay" class="h-8 w-auto" />
+        <img loading="lazy" src="images/logo/logo-hiplay.png" alt="hIPlay" class="h-8 w-auto" />
         <span class="text-slate-300">|</span>
         <span class="text-slate-600 font-semibold">Indonesia's IP Playground by Provaliant Studios</span>
       </div>
