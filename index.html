@@ -149,11 +149,13 @@
 
 <body class="bg-[#FAFBFC] text-slate-900 selection:bg-rose-500 selection:text-white font-sans antialiased relative">
 
-  <!-- Floating Candy Ambient Glows -->
-  <div class="bubble-shape bubble-yellow w-[500px] h-[500px] -top-32 -left-32"></div>
-  <div class="bubble-shape bubble-coral w-[600px] h-[600px] top-40 -right-40"></div>
-  <div class="bubble-shape bubble-blue w-[500px] h-[500px] top-[1400px] -left-20"></div>
-  <div class="bubble-shape bubble-purple w-[600px] h-[600px] top-[2600px] -right-32"></div>
+  <!-- Floating Candy Ambient Glows (clipped to prevent mobile overflow) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index:-1">
+    <div class="bubble-shape bubble-yellow w-[500px] h-[500px] -top-32 -left-32"></div>
+    <div class="bubble-shape bubble-coral w-[600px] h-[600px] top-40 -right-40"></div>
+    <div class="bubble-shape bubble-blue w-[500px] h-[500px] top-[1400px] -left-20"></div>
+    <div class="bubble-shape bubble-purple w-[600px] h-[600px] top-[2600px] -right-32"></div>
+  </div>
 
   <!-- Announcement Bar -->
   <div class="bg-gradient-to-r from-rose-500 via-amber-500 to-sky-500 text-white text-xs font-bold py-2 px-4 text-center sticky top-0 z-50 shadow-sm flex items-center justify-center gap-2">
