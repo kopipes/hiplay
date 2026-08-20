@@ -428,48 +428,8 @@ window.hIPlayApp = {
               </ul>
             </div>
           </div>
-          <button onclick="hIPlayApp.closeIPModal()" class="p-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors">
-            <i data-lucide="x" class="w-5 h-5"></i>
-          </button>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8">
-          <div class="lg:col-span-5 space-y-6">
-            <div class="p-5 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100/70 border border-slate-200/60">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                <i data-lucide="book-open" class="w-4 h-4 text-rose-500"></i> Theme & Narrative
-              </h4>
-              <p class="text-sm text-slate-700 leading-relaxed">${ip.theme}</p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i> Background & Community Reach
-              </h4>
-              <p class="text-sm text-slate-700 leading-relaxed">${ip.background}</p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-slate-900 text-white">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Key Highlights & Metrics</h4>
-              <div class="grid grid-cols-1 gap-3">
-                ${ip.metrics.map(m => `
-                  <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                    <span class="text-xs text-slate-400">${m.label}</span>
-                    <span class="text-sm font-bold text-amber-400">${m.val}</span>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-rose-50 border border-rose-100">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-rose-700 mb-2">Commercial Merch Line</h4>
-              <ul class="text-xs text-slate-700 space-y-1.5">
-                ${ip.merchHighlights ? ip.merchHighlights.map(h => `<li class="flex items-start gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5"></i> ${h}</li>`).join('') : ''}
-              </ul>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 space-y-6">
+          <div class="lg:col-span-7 space-y-4">
             ${ip.styleGuideImage ? `
               <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
                 <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5 mb-3">
