@@ -602,34 +602,74 @@ window.hIPlayApp = {
     }
   },
 
-  handleContactSubmit(event) {
+  async handleContactSubmit(event) {
     event.preventDefault();
-    const name = document.getElementById('contactName')?.value || 'Partner';
-    const company = document.getElementById('contactCompany')?.value || 'Organization';
+    const name = document.getElementById('contactName')?.value || '';
+    const company = document.getElementById('contactCompany')?.value || '';
     const email = document.getElementById('contactEmail')?.value || '';
     const phone = document.getElementById('contactPhone')?.value || '';
     const ipInterest = document.getElementById('inquiryIP')?.value || 'All IPs';
     const message = document.getElementById('inquiryMessage')?.value || '';
+    const honeypot = document.getElementById('contactHoneypot')?.value || '';
 
     const feedback = document.getElementById('contactFormFeedback');
-    if (feedback) {
-      feedback.innerHTML = `
-        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-start gap-3">
-          <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0"></i>
-          <div>
-            <strong class="font-bold block text-sm mb-0.5">Inquiry Sent Successfully!</strong>
-            Thank you, ${name} from ${company}. Our partnerships team (Nungky Pratiwi & Chandra Sugiono) will reach out to you at ${email || phone} shortly.
-          </div>
-        </div>
-      `;
+    const submitBtn = document.getElementById('contactSubmitBtn');
+
+    // Honeypot check
+    if (honeypot.trim() !== '') return;
+
+    // Disable button while submitting
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending...</span><i data-lucide="loader" class="w-4 h-4 animate-spin"></i>';
       if (window.lucide) lucide.createIcons();
     }
 
-    const mailto = 'mailto:nungky@provaliantgroup.com,chandra@provaliantgroup.com?subject=hIPlay Partnership Inquiry from ' + encodeURIComponent(company) + ' - ' + encodeURIComponent(name) + '&body=' + encodeURIComponent('Name: ' + name + '\nCompany: ' + company + '\nEmail: ' + email + '\nPhone: ' + phone + '\nIP of Interest: ' + ipInterest + '\n\nMessage:\n' + message);
-    
-    setTimeout(() => {
-      window.location.href = mailto;
-    }, 1200);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, company, email, phone, ipInterest, message, website: honeypot })
+      });
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        if (feedback) {
+          feedback.innerHTML = `
+            <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+              <div>
+                <strong class="font-bold block text-sm mb-0.5">Inquiry Sent Successfully!</strong>
+                Thank you, ${name} from ${company}. Our partnerships team will reach out to you at ${email} shortly.
+              </div>
+            </div>
+          `;
+          if (window.lucide) lucide.createIcons();
+        }
+        event.target.reset();
+      } else {
+        throw new Error(data.error || 'Failed to send');
+      }
+    } catch (err) {
+      if (feedback) {
+        feedback.innerHTML = `
+          <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-start gap-3">
+            <i data-lucide="alert-circle" class="w-5 h-5 text-rose-500 shrink-0"></i>
+            <div>
+              <strong class="font-bold block text-sm mb-0.5">Something went wrong.</strong>
+              ${err.message}. Please try WhatsApp or email us directly.
+            </div>
+          </div>
+        `;
+        if (window.lucide) lucide.createIcons();
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Submit Inquiry to Provaliant Group</span><i data-lucide="send" class="w-4 h-4"></i>';
+        if (window.lucide) lucide.createIcons();
+      }
+    }
   },
 
   setupSmoothScroll() {
