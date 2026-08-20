@@ -107,6 +107,7 @@ const IP_DATABASE = [
     merchImage: 'img/slide-22.jpg',
     mascotImage: 'img/slide-04.jpg',
     slides: [20, 21, 22, 4],
+    logoImage: 'images/logo/logo-haidudu.png',
     charImage: 'images/character/hidudu.png',
     merchHighlights: ['Dudu & Bimo crossbody sling bags', 'Pastel graphic tees & daily apparel', 'Collector tumbler series with character expressions', 'Cute keychains, pastel caps & cosmetic pouches']
   },
